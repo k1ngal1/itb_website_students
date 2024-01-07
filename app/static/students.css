@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100;
+  }
+}
+
+/*#background {
+    background-image: url(".jpg") ;
+    background-position: center center;   
+    background-size: cover;  
+}
+*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: rgb(41, 41, 248);
+}
+.logo {
+  position: absolute;
+  margin-left: 200px;
+  width: 8vh;
+  border-radius: 0px;
+}
+.title {
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 5px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  padding: 10px;
+  color: white;
+}
+
+.nav-links a:hover {
+  color: rgb(41, 41, 248);
+  background: white;
+  border-radius: 30px;
+}
+
+.container {
+  border: 5px rgb(41, 41, 248) solid;
+  width: max-content;
+  text-align: center;
+  padding: 40px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 300px;
+  animation: slideInBottom 0.8s ease-in, fade 1s ease-in;
+}
+
+.middle_square {
+  width: 90%;
+  margin-top: 5%;
+}
+
+.heading-1 {
+  color: rgb(41, 41, 248);
+  letter-spacing: 3px;
+  margin: 20px;
+}
+
+.sec {
+  background: rgb(41, 41, 248);
+  text-align: left;
+  padding: 40px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 400px;
+}
+
+.heading-2 {
+  color: white;
+  letter-spacing: 3px;
+  margin: 10px;
+}
+
+.text {
+  color: white;
+  letter-spacing: 3px;
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+  height: auto;
+}
+
+.button {
+  color: rgb(41, 41, 248);
+  text-decoration: none;
+  list-style: none;
+  font-size: 20px;
+  letter-spacing: 3px;
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.is-danger {
+  color: red;
+}
+
+.is-success {
+  color: rgb(36, 252, 36);
+}
+
+.button:hover,
+.button.active {
+  color: white;
+  background: rgb(41, 41, 248);
+  border-radius: 30px;
+}
+
+.is-danger:hover {
+  color: white;
+  background: red;
+}
+
+.is-success:hover {
+  color: white;
+  background: rgb(36, 252, 36);
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  min-width: 400px;
+  margin: 0px auto;
+}
+
+.table thead tr {
+  background-color: rgb(41, 41, 248);
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 1px solid;
+  letter-spacing: 3px;
+}
+
+.table th,
+td {
+  padding: 12px 15px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background: lightgray;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: white;
+}
+
+.table tbody tr:hover {
+  background: rgb(155, 155, 155);
+}
+
+.stuck {
+  position: sticky;
+  top: 0;
+}
+
+.form {
+  width: 30%;
+  text-align: left;
+  margin: 0px auto;
+}
+
+.form_label {
+  color: rgb(41, 41, 248);
+  letter-spacing: 3px;
+  font-size: 18px;
+}
+
+.form_input {
+  border: none;
+  border-bottom: 1px solid;
+  margin: 5px;
+  font-size: 18px;
+}

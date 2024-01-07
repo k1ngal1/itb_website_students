@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Students ITB - {% block title %}{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='students.css')}}"
+    />
+  </head>
+  <body id="background">
+    <a href="{{url_for('students')}}">
+      <img
+        class="logo"
+        src="https://pbs.twimg.com/profile_images/1083284716927832064/zRJfXTVx_400x400.jpg"
+        alt="ITB Logo"
+    /></a>
+    <nav>
+      <a class="title" href="{{url_for('students')}}">ITB</a>
+      <ul class="nav-links">
+        <li>
+          <a href="{{url_for('students')}}">Home</a>
+        </li>
+        <li>
+          <a href="{{url_for('students_list')}}">Students</a>
+        </li>
+        <li>
+          <a href="/form_insert_student">Insert</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    {%block content %} {% endblock %}
+    <section class="sec">
+      <center><h1 class="heading-2">About us</h1></center>
+      <br />
+      <p class="text">
+        The Institut Tecnologic de Barcelona is a renowned technology institute
+        that has been providing cutting-edge education in the field of
+        technology for over two decades. Our institution is committed to
+        nurturing the next generation of technology leaders, who will drive
+        innovation and change in the world. <br /><br />
+        At the heart of our institute is our student body, which is composed of
+        some of the brightest and most talented individuals in the field of
+        technology. Our students come from diverse backgrounds and bring with
+        them a range of experiences and perspectives, which enriches the
+        learning environment and fosters a sense of community.
+        <br /><br />
+        We are proud of our students' achievements, both inside and outside of
+        the classroom. Our graduates have gone on to pursue successful careers
+        in a range of fields, from software development and data analytics to
+        cybersecurity and artificial intelligence. They are leaders and
+        innovators, shaping the future of technology and making a positive
+        impact on the world.
+        <br /><br />
+        Our commitment to our students goes beyond the classroom. We offer a
+        range of support services to help our students succeed, including
+        academic advising, career counseling, and networking opportunities. We
+        also provide a range of extracurricular activities and clubs, which
+        allow students to pursue their interests and develop new skills.
+        <br /><br />
+        At the Institut Tecnologic de Barcelona, we believe that technology has
+        the power to change the world for the better. We are dedicated to
+        providing our students with the education and skills they need to be
+        part of this change, and to make a positive impact on society.
+      </p>
+    </section>
+    <footer>
+      <p>Ali Hussain Kanwal &copy; 2023</p>
+    </footer>
+  </body>
+</html>

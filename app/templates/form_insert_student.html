@@ -1,0 +1,54 @@
+{% extends "master.html" %} {% block title %} Insert Student {% endblock %} {%
+block content %}
+<div class="container middle_square">
+  <h1 class="heading-1">Insert student's data</h1>
+  <form class="form" action="{{url_for('save_student')}}" method="post">
+    <label class="form_label" for="passport">Passport:</label>
+    <input
+      class="form_input"
+      required
+      type="text"
+      title="Complete this field"
+      placeholder=""
+      name="passport"
+      id="passport"
+    /><br /><br />
+
+    <label class="form_label" for="name">Full Name:</label>
+    <input
+      class="form_input"
+      required
+      type="text"
+      title="Complete this field"
+      placeholder=""
+      name="name"
+      id="name"
+    /><br /><br />
+
+    <label class="form_label" for="birth">Date of Birth:</label>
+    <input
+      class="form_input"
+      required
+      type="date"
+      title="Complete this field"
+      placeholder=""
+      name="birth"
+      id="birth"
+    /><br /><br />
+
+    <label class="form_label" for="height">Height (cm):</label>
+    <input
+      class="form_input"
+      required
+      type="number"
+      title="Complete this field"
+      placeholder=""
+      name="height"
+      id="height"
+    /><br /><br />
+
+    <button class="button is-success" type="submit">Save</button>
+    <a class="button" href="{{url_for('students_list')}}">Return</a>
+  </form>
+</div>
+{% endblock %}

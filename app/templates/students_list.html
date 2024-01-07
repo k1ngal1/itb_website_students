@@ -1,0 +1,42 @@
+{% extends "master.html" %} {% block title %} Students list {% endblock %} {%
+block content %}
+<div class="container middle_square">
+  <h1 class="heading-1">List of registered students</h1>
+  <a href="/form_insert_student" class="button active">Insert</a><br /><br />
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Passport</th>
+        <th>Name</th>
+        <th>Date of Birth</th>
+        <th>Height</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for student in students %}
+      <tr>
+        <td>{{student[0]}}</td>
+        <td>{{student[1]}}</td>
+        <td>{{student[2]}}</td>
+        <td>{{student[3]}}</td>
+        <td>
+          <a
+            href="{{url_for('edit_student', passport=student[0])}}"
+            class="button"
+            >Edit</a
+          >
+        </td>
+        <td>
+          <form action="{{url_for('delete_student')}}" method="POST">
+            <input type="hidden" name="passport" value="{{student[0]}}" />
+            <button class="button is-danger">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

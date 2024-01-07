@@ -1,0 +1,53 @@
+{% extends "master.html" %} {% block title %} Update Student {% endblock %} {%
+block content %}
+<div class="container middle_square">
+  <h1 class="heading-1">Update student's data</h1>
+  <form class="form" action="{{url_for('update_student')}}" method="post">
+    <input
+      class="form_input"
+      type="hidden"
+      name="passport"
+      value="{{student[0]}}"
+    />
+
+    <label class="form_label" for="name">Full Name:</label>
+    <input
+      class="form_input"
+      value="{{student[1]}}"
+      required
+      type="text"
+      title="Complete this field"
+      placeholder="Name"
+      name="name"
+      id="name"
+    /><br /><br />
+
+    <label class="form_label" for="birth">Date of Birth:</label>
+    <input
+      class="form_input"
+      value="{{student[2]}}"
+      required
+      type="date"
+      title="Complete this field"
+      placeholder="birth"
+      name="birth"
+      id="birth"
+    /><br /><br />
+
+    <label class="form_label" for="height">Height (cm):</label>
+    <input
+      class="form_input"
+      value="{{student[3]}}"
+      required
+      type="number"
+      title="Complete this field"
+      placeholder="height"
+      name="height"
+      id="height"
+    /><br /><br />
+
+    <button type="submit" class="button is-success">Save</button>
+    <a href="{{url_for('students_list')}}" class="button">Return</a>
+  </form>
+</div>
+{% endblock %}
